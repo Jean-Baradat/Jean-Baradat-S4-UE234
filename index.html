@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- flickity css -->
+    <link rel="stylesheet" href="assets/css/flickity.css">
+    <script src="assets/js/script.js"></script>
+    <!-- flickity JS -->
+    <script src="assets/js/flickity.pkgd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/REC-logo-small-2.ico">
+    <title>REC</title>
+</head>
+<body class="body">
+    <main class="body-main">
+        <header class="main-header">
+            <div class="main-header-contents">
+                <div class="main-header-contents-elements">
+                    <div class="main-header-contents-elements-flex">
+                        <div class="main-header-elements-channel">
+                            <button type="button" class="main-header-content-element-button-menu" onclick="menu()"><img src="assets/images/menu.png" alt="Menu" title="Menu" class="main-header-content-element-menu"></button>
+                            <a href="#" target="_self"><img src="assets/images/upload-video.png" alt="Mettre en ligne une vidéo" title="Mettre en ligne" class="main-header-content-element-upload"></a>
+                            <a href="#" target="_self"><img src="assets/images/live-stream.png" alt="Lancer un live" title="Lancer un live" class="main-header-content-element-live"></a>
+                        </div>
+                        <div>
+                            <form action="#" method="get" target="_self" class="main-header-elements-search-bar">
+                                <button type="submit" class="main-header-elements-search-bar-voice-search">
+                                    <img src="assets/images/microphone.png" alt="Recherche vocale" class="main-header-elements-search-bar-voice-search-img" title="Recherche vocale">
+                                </button>
+                                <input type="text" name="search bar" id="search-bar" placeholder="Rechercher" aria-label="Faire une recherche sur le site" class="main-header-elements-search-bar-area" required>
+                                <button type="submit" class="main-header-elements-search-bar-button">
+                                    <img src="assets/images/loupe.png" alt="Rechercher" class="main-header-elements-search-bar-button-img" title="Rechercher">
+                                </button>
+                            </form>
+                        </div>
+                        <div class="main-header-elements-account">
+                            <button type="button" class="main-header-elements-account-setting" onclick="displayDivSetting()"><img src="assets/images/dots.png" alt="Paramètre" title="Paramètre" class="main-header-elements-account-setting-img"></button>
+                            <div class="main-header-elements-account-setting-div" id="div-setting">
+                                <div class="main-header-elements-account-setting-div-content">
+                                    <h3 class="main-header-elements-account-setting-title">Paramètres</h3>
+                                    <a href="#" target="_self" title="Apparence" class="main-header-elements-account-setting-link">Apparence</a>
+                                    <a href="#" target="_self" title="Langue" class="main-header-elements-account-setting-link">Langue</a>
+                                    <a href="#" target="_self" title="Pays" class="main-header-elements-account-setting-link">Pays</a>
+                                </div>
+                            </div>
+                            <button type="button" class="main-header-elements-account-profile" onclick="displayDivProfile()"><img src="assets/images/image-de-jean-baradat.png" alt="Votre compte REC" title="Compte REC" class="main-header-elements-account-profile-img"></button>
+                            <div class="main-header-elements-account-profile-div" id="div-profile">
+                                <div class="main-header-elements-account-profile-div-content">
+                                    <h3 class="main-header-elements-account-profile-title">Compte</h3>
+                                    <a href="#" target="_self" title="Apparence" class="main-header-elements-account-profile-link">Premium</a>
+                                    <a href="#" target="_self" title="Langue" class="main-header-elements-account-profile-link">Ma chaîne</a>
+                                    <a href="#" target="_self" title="Pays" class="main-header-elements-account-profile-link">Mes vidéos</a>
+                                    <a href="#" target="_self" title="Pays" class="main-header-elements-account-profile-link">Se déconnecter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-subscriptions">
+                        <div class="gallery js-flickity" data-flickity='{ "contain": true, "pageDots": false, "prevNextButtons": false }'>
+                            <div class="gallery-cell"></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/logo-lofi-girl.jpg" alt="Lofi Girl" class="gallery-cell-img-flickity in-live" title="Lofi Girl"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/marble-machine-logo.jpg" alt="Wintergatan" class="gallery-cell-img-flickity" title="Wintergatan"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/logo-thinkerview.jpg" alt="Thinkerview" class="gallery-cell-img-flickity" title="Thinkerview"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de truc" class="gallery-cell-img-flickity" title="Chaîne de truc"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne de machin" class="gallery-cell-img-flickity" title="Chaîne de machin"></a></div>
+                            <div class="gallery-cell"><a href="#" target="_self"><img src="assets/images/image-de-jean-baradat.png" alt="Chaîne REC" class="gallery-cell-img-flickity" title="Chaîne REC"></a></div>
+                            <div class="gallery-cell"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="main-content-elements">
+                <h2>En direct</h2>
+                <div class="gallery-live">
+                    <div class="gallery js-flickity" data-flickity='{ "contain": true, "pageDots": false, "freeScroll": true, "wrapAround": true }'>
+                        <div class="gallery-cell">
+                            <a href="#" target="_self" class="gallery-cell-poster">
+                                <img src="assets/images/img-video.jpg" alt="" class="gallery-cell-img-flickity" title="">
+                                <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="gallery-cell-icon-flickity" title="Lire">
+                            </a>
+                            <div class="live-information">
+                                <div>
+                                    <a href="#" target="_self"><img src="assets/images/logo-lofi-girl.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                </div>
+                                <div class="video-information-infos">
+                                    <a href="#" target="_self" class="video-information-info-title" title="lofi hip hop radio - beats to relax/study to">lofi hip hop radio - beats to relax/study to</a>
+                                    <a href="#" target="_self" class="video-information-infos-channel-name" title="Lofi Girl">Lofi Girl</a>
+                                    <a href="#" target="_self" class="live-information-infos-live" title="En direct">En direct</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-cell">
+                            <a href="#" target="_self" class="gallery-cell-poster">
+                                <img src="assets/images/img-video.jpg" alt="" class="gallery-cell-img-flickity" title="">
+                                <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="gallery-cell-icon-flickity" title="Lire">
+                            </a>
+                            <div class="live-information">
+                                <div>
+                                    <a href="#" target="_self"><img src="assets/images/logo-lofi-girl.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                </div>
+                                <div class="video-information-infos">
+                                    <a href="#" target="_self" class="video-information-info-title" title="lofi hip hop radio - beats to relax/study to">lofi hip hop radio - beats to relax/study to</a>
+                                    <a href="#" target="_self" class="video-information-infos-channel-name" title="Lofi Girl">Lofi Girl</a>
+                                    <a href="#" target="_self" class="live-information-infos-live" title="En direct">En direct</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-cell">
+                            <a href="#" target="_self" class="gallery-cell-poster">
+                                <img src="assets/images/img-video.jpg" alt="" class="gallery-cell-img-flickity" title="">
+                                <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="gallery-cell-icon-flickity" title="Lire">
+                            </a>
+                            <div class="live-information">
+                                <div>
+                                    <a href="#" target="_self"><img src="assets/images/logo-lofi-girl.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                </div>
+                                <div class="video-information-infos">
+                                    <a href="#" target="_self" class="video-information-info-title" title="lofi hip hop radio - beats to relax/study to">lofi hip hop radio - beats to relax/study to</a>
+                                    <a href="#" target="_self" class="video-information-infos-channel-name" title="Lofi Girl">Lofi Girl</a>
+                                    <a href="#" target="_self" class="live-information-infos-live" title="En direct">En direct</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-cell">
+                            <a href="#" target="_self" class="gallery-cell-poster">
+                                <img src="assets/images/img-video.jpg" alt="" class="gallery-cell-img-flickity" title="">
+                                <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="gallery-cell-icon-flickity" title="Lire">
+                            </a>
+                            <div class="live-information">
+                                <div>
+                                    <a href="#" target="_self"><img src="assets/images/logo-lofi-girl.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                </div>
+                                <div class="video-information-infos">
+                                    <a href="#" target="_self" class="video-information-info-title" title="lofi hip hop radio - beats to relax/study to">lofi hip hop radio - beats to relax/study to</a>
+                                    <a href="#" target="_self" class="video-information-infos-channel-name" title="Lofi Girl">Lofi Girl</a>
+                                    <a href="#" target="_self" class="live-information-infos-live" title="En direct">En direct</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-cell">
+                            <a href="#" target="_self" class="gallery-cell-poster">
+                                <img src="assets/images/img-video.jpg" alt="" class="gallery-cell-img-flickity" title="">
+                                <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="gallery-cell-icon-flickity" title="Lire">
+                            </a>
+                            <div class="live-information">
+                                <div>
+                                    <a href="#" target="_self"><img src="assets/images/logo-lofi-girl.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                </div>
+                                <div class="video-information-infos">
+                                    <a href="#" target="_self" class="video-information-info-title" title="lofi hip hop radio - beats to relax/study to">lofi hip hop radio - beats to relax/study to</a>
+                                    <a href="#" target="_self" class="video-information-infos-channel-name" title="Lofi Girl">Lofi Girl</a>
+                                    <a href="#" target="_self" class="live-information-infos-live" title="En direct">En direct</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-cell">
+                            <a href="#" target="_self" class="gallery-cell-poster">
+                                <img src="assets/images/img-video.jpg" alt="" class="gallery-cell-img-flickity" title="">
+                                <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="gallery-cell-icon-flickity" title="Lire">
+                            </a>
+                            <div class="live-information">
+                                <div>
+                                    <a href="#" target="_self"><img src="assets/images/logo-lofi-girl.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                </div>
+                                <div class="video-information-infos">
+                                    <a href="#" target="_self" class="video-information-info-title" title="lofi hip hop radio - beats to relax/study to">lofi hip hop radio - beats to relax/study to</a>
+                                    <a href="#" target="_self" class="video-information-infos-channel-name" title="Lofi Girl">Lofi Girl</a>
+                                    <a href="#" target="_self" class="live-information-infos-live" title="En direct">En direct</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-cell">
+                            <a href="#" target="_self" class="gallery-cell-poster">
+                                <img src="assets/images/img-video.jpg" alt="" class="gallery-cell-img-flickity" title="">
+                                <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="gallery-cell-icon-flickity" title="Lire">
+                            </a>
+                            <div class="live-information">
+                                <div>
+                                    <a href="#" target="_self"><img src="assets/images/logo-lofi-girl.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                </div>
+                                <div class="video-information-infos">
+                                    <a href="#" target="_self" class="video-information-info-title" title="lofi hip hop radio - beats to relax/study to">lofi hip hop radio - beats to relax/study to</a>
+                                    <a href="#" target="_self" class="video-information-infos-channel-name" title="Lofi Girl">Lofi Girl</a>
+                                    <a href="#" target="_self" class="live-information-infos-live" title="En direct">En direct</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="main-content-title-before">Tendances</h2>
+                <div class="trends">
+                    <div class="main-content-video">
+                        <div class="main-content-video-block video-block-1">
+                            <div class="main-content-video-block-video">
+                                <a href="#" target="_self" class="main-content-video-block-video-link">
+                                    <img src="assets/images/marble-machine.jpg" alt="" class="main-content-video-block-video-img" title="">
+                                    <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="main-content-video-block-video-icon" title="Lire">
+                                </a>
+                                <div class="video-information">
+                                    <div>
+                                        <a href="#" target="_self"><img src="assets/images/marble-machine-logo.jpg" alt="Wintergatan" title="Wintergatan" class="subscription-icon-profile-img"></a>
+                                    </div>
+                                    <div class="video-information-infos">
+                                        <a href="#" target="_self" class="video-information-info-title" title="Wintergatan - Marble Machine (music instrument using 2000 marbles)">Wintergatan - Marble Machine (music instrument using 2000 marbles)</a>
+                                        <a href="#" target="_self" class="video-information-infos-channel-name" title="Wintergatan">Wintergatan</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-video-block video-block-2">
+                            <div class="main-content-video-block-right">
+                                <div class="main-content-video-block-right-line">
+
+                                    <div class="main-content-video-block-video block-video-right">
+                                        <div class="video-information-block-right video-information">
+                                            <div>
+                                                <a href="#" target="_self"><img src="assets/images/marble-machine-logo.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                            </div>
+                                            <div class="video-information-infos">
+                                                <a href="#" target="_self" class="video-information-info-title info-video-right" title="Wintergatan - Marble Machine (music instrument using 2000 marbles)">Wintergatan - Marble Machine (music instrument using 2000 marbles)</a>
+                                                <a href="#" target="_self" class="video-information-infos-channel-name info-video-right" title="Wintergatan">Wintergatan</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" target="_self" class="block-right-link-master">
+                                            <img src="assets/images/marble-machine.jpg" alt="" class="main-content-video-block-video-img block-right-img" title="">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-content-video-block-video block-video-right">
+                                        <div class="video-information-block-right video-information">
+                                            <div>
+                                                <a href="#" target="_self"><img src="assets/images/marble-machine-logo.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                            </div>
+                                            <div class="video-information-infos">
+                                                <a href="#" target="_self" class="video-information-info-title info-video-right" title="Wintergatan - Marble Machine (music instrument using 2000 marbles)">Wintergatan - Marble Machine (music instrument using 2000 marbles)</a>
+                                                <a href="#" target="_self" class="video-information-infos-channel-name info-video-right" title="Wintergatan">Wintergatan</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" target="_self" class="block-right-link-master">
+                                            <img src="assets/images/marble-machine.jpg" alt="" class="main-content-video-block-video-img block-right-img" title="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="main-content-video-block-right-line">
+
+                                    <div class="main-content-video-block-video block-video-right">
+                                        <div class="video-information-block-right video-information">
+                                            <div>
+                                                <a href="#" target="_self"><img src="assets/images/marble-machine-logo.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                            </div>
+                                            <div class="video-information-infos">
+                                                <a href="#" target="_self" class="video-information-info-title info-video-right" title="Wintergatan - Marble Machine (music instrument using 2000 marbles)">Wintergatan - Marble Machine (music instrument using 2000 marbles)</a>
+                                                <a href="#" target="_self" class="video-information-infos-channel-name info-video-right" title="Wintergatan">Wintergatan</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" target="_self" class="block-right-link-master">
+                                            <img src="assets/images/marble-machine.jpg" alt="" class="main-content-video-block-video-img block-right-img" title="">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-content-video-block-video block-video-right block-video-right-end">
+                                        <div class="video-information-block-right video-information">
+                                            <div>
+                                                <a href="#" target="_self"><img src="assets/images/marble-machine-logo.jpg" alt="Lofi Girl" title="Lofi Girl" class="subscription-icon-profile-img"></a>
+                                            </div>
+                                            <div class="video-information-infos">
+                                                <a href="#" target="_self" class="video-information-info-title info-video-right" title="Wintergatan - Marble Machine (music instrument using 2000 marbles)">Wintergatan - Marble Machine (music instrument using 2000 marbles)</a>
+                                                <a href="#" target="_self" class="video-information-infos-channel-name info-video-right" title="Wintergatan">Wintergatan</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" target="_self" class="block-right-link-master">
+                                            <img src="assets/images/marble-machine.jpg" alt="" class="main-content-video-block-video-img block-right-img" title="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-more-zone">
+                        <a href="#" target="_self"><img src="assets/images/fast-forward-thin-arrows.png" alt="bouton voir plus" class="button-more" title="Voir plus"></a>
+                    </div>
+                </div>
+                <div class="pub">
+                    <a href="#" target="_self">
+                        <h3 class="pub-title">Publicité</h3>
+                        <img src="assets/images/pub.png" alt="Coca Cola" title="" class="pub-coca-cola">
+                    </a>
+                </div>
+                <h2 class="main-content-title-before">Actualité</h2>
+                <div class="news">
+                    <div class="main-content-video">
+                        <div class="main-content-video-block video-block-1">
+                            <div class="main-content-video-block-video">
+                                <a href="#" target="_self" class="main-content-video-block-video-link">
+                                    <img src="assets/images/img-video-1.jpg" alt="" class="main-content-video-block-video-img" title="">
+                                    <img src="assets/images/play-button-arrowhead.png" alt="Lire" class="main-content-video-block-video-icon" title="Lire">
+                                </a>
+                                <div class="video-information">
+                                    <div>
+                                        <a href="#" target="_self"><img src="assets/images/logo-thinkerview.jpg" alt="Thinkerview" title="Thinkerview" class="subscription-icon-profile-img"></a>
+                                    </div>
+                                    <div class="video-information-infos">
+                                        <a href="#" target="_self" class="video-information-info-title" title="Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]">Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]</a>
+                                        <a href="#" target="_self" class="video-information-infos-channel-name" title="Thinkerview">Thinkerview</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content-video-block video-block-2">
+                            <div class="main-content-video-block-right">
+                                <div class="main-content-video-block-right-line">
+
+                                    <div class="main-content-video-block-video block-video-right">
+                                        <div class="video-information-block-right video-information">
+                                            <div>
+                                                <a href="#" target="_self"><img src="assets/images/logo-thinkerview.jpg" alt="Thinkerview" title="Thinkerview" class="subscription-icon-profile-img"></a>
+                                            </div>
+                                            <div class="video-information-infos">
+                                                <a href="#" target="_self" class="video-information-info-title info-video-right" title="Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]">Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]</a>
+                                                <a href="#" target="_self" class="video-information-infos-channel-name info-video-right" title="Thinkerview">Thinkerview</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" target="_self" class="block-right-link-master">
+                                            <img src="assets/images/img-video-1.jpg" alt="" class="main-content-video-block-video-img block-right-img" title="">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-content-video-block-video block-video-right">
+                                        <div class="video-information-block-right video-information">
+                                            <div>
+                                                <a href="#" target="_self"><img src="assets/images/logo-thinkerview.jpg" alt="Thinkerview" title="Thinkerview" class="subscription-icon-profile-img"></a>
+                                            </div>
+                                            <div class="video-information-infos">
+                                                <a href="#" target="_self" class="video-information-info-title info-video-right" title="Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]">Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]</a>
+                                                <a href="#" target="_self" class="video-information-infos-channel-name info-video-right" title="Thinkerview">Thinkerview</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" target="_self" class="block-right-link-master">
+                                            <img src="assets/images/img-video-1.jpg" alt="" class="main-content-video-block-video-img block-right-img" title="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="main-content-video-block-right-line">
+
+                                    <div class="main-content-video-block-video block-video-right">
+                                        <div class="video-information-block-right video-information">
+                                            <div>
+                                                <a href="#" target="_self"><img src="assets/images/logo-thinkerview.jpg" alt="Thinkerview" title="Thinkerview" class="subscription-icon-profile-img"></a>
+                                            </div>
+                                            <div class="video-information-infos">
+                                                <a href="#" target="_self" class="video-information-info-title info-video-right" title="Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]">Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]</a>
+                                                <a href="#" target="_self" class="video-information-infos-channel-name info-video-right" title="Thinkerview">Thinkerview</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" target="_self" class="block-right-link-master">
+                                            <img src="assets/images/img-video-1.jpg" alt="" class="main-content-video-block-video-img block-right-img" title="">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-content-video-block-video block-video-right block-video-right-end">
+                                        <div class="video-information-block-right video-information">
+                                            <div>
+                                                <a href="#" target="_self"><img src="assets/images/logo-thinkerview.jpg" alt="Thinkerview" title="Thinkerview" class="subscription-icon-profile-img"></a>
+                                            </div>
+                                            <div class="video-information-infos">
+                                                <a href="#" target="_self" class="video-information-info-title info-video-right" title="Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]">Démocratie : Épiphénomène historique, sécession des élites ? Barbara Stiegler [EN DIRECT]</a>
+                                                <a href="#" target="_self" class="video-information-infos-channel-name info-video-right" title="Thinkerview">Thinkerview</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" target="_self" class="block-right-link-master">
+                                            <img src="assets/images/img-video-1.jpg" alt="" class="main-content-video-block-video-img block-right-img" title="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-more-zone">
+                        <a href="#" target="_self"><img src="assets/images/fast-forward-thin-arrows.png" alt="bouton voir plus" class="button-more" title="Voir plus"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="main-footer">
+            <p class="footer-content">One-Page réalisée par Jean Baradat dans le cadre de l'UE 234</p>
+            <p class="copyright">Tous droit réservés | Copyright © 2021</p>
+        </footer>
+    </main>
+    <aside class="body-aside" id="menu-aside-mobile">
+        <button type="button" class="body-aside-button-menu" onclick="menu()"><img src="assets/images/menu.png" alt="Menu" title="Menu" class="body-aside-element-menu-img"></button>
+        <div class="body-aside-main">
+            <a href="#" target="_self"><img src="assets/images/REC-logo-only.png" alt="Logo REC" title="Logo" class="aside-logo"></a>
+            <a href="#" target="_self" title="Accueil" class="body-aside-main-link body-aside-main-link-home">Accueil</a>
+            <a href="#" target="_self" title="Abonnements" class="body-aside-main-link body-aside-main-link-subscriptions">Abonnements</a>
+        </div>
+        <div class="body-aside-element">
+            <a href="#" target="_self" title="Historique" class="body-aside-element-link body-aside-element-link-historical">Historique</a>
+            <a href="#" target="_self" title="Mes playlists" class="body-aside-element-link body-aside-element-link-playlists">Mes playlists</a>
+            <a href="#" target="_self" title="Vidéos aimées" class="body-aside-element-link body-aside-element-link-love">Vidéos aimées</a>
+        </div>
+        <div class="body-aside-element">
+            <h3 class="body-aside-element-title">Découvrir...</h3>
+            <a href="#" target="_self" title="Explorer" class="body-aside-element-link body-aside-element-link-explore">Explorer</a>
+            <a href="#" target="_self" title="Films et TV" class="body-aside-element-link body-aside-element-link-movie-tv">Films et TV</a>
+            <a href="#" target="_self" title="Jeux vidéo" class="body-aside-element-link body-aside-element-link-games">Jeux vidéo</a>
+            <a href="#" target="_self" title="En direct" class="body-aside-element-link body-aside-element-link-live">En direct</a>
+            <a href="#" target="_self" title="Mode et beauté" class="body-aside-element-link body-aside-element-link-fashion">Mode et beauté</a>
+            <a href="#" target="_self" title="Savoir et culture" class="body-aside-element-link body-aside-element-link-culture">Savoir et culture</a>
+            <a href="#" target="_self" title="Sport" class="body-aside-element-link body-aside-element-link-sport">Sport</a>
+        </div>
+        <div class="body-aside-element">
+            <h3 class="body-aside-element-title">Gérer votre chaîne...</h3>
+            <a href="#" target="_self" title="Mettre en ligne" class="body-aside-element-link body-aside-element-link-upload">Mettre en ligne</a>
+            <a href="#" target="_self" title="Mes vidéos" class="body-aside-element-link body-aside-element-link-videos">Mes vidéos</a>
+            <a href="#" target="_self" title="Ma chaîne" class="body-aside-element-link body-aside-element-link-channel">Ma chaîne</a>
+        </div>
+        <div class="body-aside-element">
+            <a href="#" target="_self" title="Paramètres" class="body-aside-element-link body-aside-element-link-settings">Paramètres</a>
+            <a href="#" target="_self" title="En savoir plus" class="body-aside-element-link body-aside-element-link-more">En savoir plus</a>
+            <a href="#" target="_self" title="Nous contacter" class="body-aside-element-link body-aside-element-link-contact" id="body-aside-element-last-link">Nous contacter</a>
+            <p class="copyright">Tous droit réservés | Copyright © 2021</p>
+        </div>
+    </aside>
+</body>
+</html>
